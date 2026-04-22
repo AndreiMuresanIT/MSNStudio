@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – MSN Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">MSN Studio</div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" data-key="nav_home">Home</a></li>
+        <li class="active"><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="team.html" data-key="nav_team">Team</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="language-switch">
+  <div class="switch">
+    <span class="label">ENG</span>
+    <div class="toggle" onclick="toggleLanguage()">
+      <div class="circle"></div>
+    </div>
+    <span class="label">RO</span>
+  </div>
+</div>
+  </header>
+
+  <!-- WHO WE ARE -->
+  <section class="about-section">
+    <h2 data-key="who_we_are">Who we are?</h2>
+
+    <p data-key="about_text_1">
+      MSN Studio is a bold and data-driven marketing agency based in the heart of Europe. We specialize in transforming ideas into powerful campaigns by blending creativity, precision, and innovation. Whether it’s branding, content, or full-scale digital strategies, we tailor everything to your goals.
+    </p>
+
+    <p data-key="about_text_2">
+      Our team believes in transparent collaboration and delivering measurable results. We’re not just a marketing firm — we’re your creative allies, strategizing success one click at a time.
+    </p>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us">
+    <h2 data-key="why_choose">Why choose us?</h2>
+    <ul>
+      <li>
+        <strong data-key="why_1_title">Creative but grounded:</strong>
+        <span data-key="why_1_text"> We balance imagination with real-world performance data.</span>
+      </li>
+      <li>
+        <strong data-key="why_2_title">Client-first approach:</strong>
+        <span data-key="why_2_text"> Every strategy is customized, never copy-paste.</span>
+      </li>
+      <li>
+        <strong data-key="why_3_title">Results you can measure:</strong>
+        <span data-key="why_3_text"> Engagement, leads, conversions — we optimize all.</span>
+      </li>
+      <li>
+        <strong data-key="why_4_title">Partners, not vendors:</strong>
+        <span data-key="why_4_text"> We grow with you, not just for you.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CLIENTS SECTION -->
+  <section class="clients">
+    <h2 data-key="clients_title">Clients we’ve helped</h2>
+
+    <div class="client-grid">
+      <a class="client-card" href="https://www.apple.com" target="_blank">
+        <div class="tooltip">
+          <span class="tooltip-text" data-key="apple_tooltip">
+            We automated Apple’s retargeting campaigns using AI, boosting their conversion rate by 28%.
+          </span>
+          <h3>Apple</h3>
+          <p data-key="apple_desc">+32% product engagement in 4 months after our digital campaign.</p>
+        </div>
+      </a>
+
+      <a class="client-card" href="https://www.prada.com" target="_blank">
+        <div class="tooltip">
+          <span class="tooltip-text" data-key="prada_tooltip">
+            We launched a fashion mini-series campaign that increased time-on-site by 67%.
+          </span>
+          <h3>Prada</h3>
+          <p data-key="prada_desc">Luxury redefined through visual branding: +40% online sales.</p>
+        </div>
+      </a>
+
+      <a class="client-card" href="https://www.starbucks.com" target="_blank">
+        <div class="tooltip">
+          <span class="tooltip-text" data-key="starbucks_tooltip">
+            Weather-based messaging led to a 53% increase in email open rates.
+          </span>
+          <h3>Starbucks</h3>
+          <p data-key="starbucks_desc">Helped build a local campaign with +60% foot traffic growth.</p>
+        </div>
+      </a>
+
+      <a class="client-card" href="https://www.harman.com" target="_blank">
+        <div class="tooltip">
+          <span class="tooltip-text" data-key="harman_tooltip">
+            We used audio niche influencers and doubled engagement without increasing the budget.
+          </span>
+          <h3>Harman Kardon</h3>
+          <p data-key="harman_desc">Brand lift through influencer strategies: 3x brand mentions.</p>
+        </div>
+      </a>
+
+      <a class="client-card" href="https://www.loropiana.com" target="_blank">
+        <div class="tooltip">
+          <span class="tooltip-text" data-key="loro_tooltip">
+            Luxury silent targeting campaign — focused only on top-tier clients. +18% offline sales.
+          </span>
+          <h3>Loro Piana</h3>
+          <p data-key="loro_desc">Refined their storytelling with +25% engagement on seasonal launches.</p>
+        </div>
+      </a>
+
+      <a class="client-card" href="https://www.nestle.com" target="_blank">
+        <div class="tooltip">
+          <span class="tooltip-text" data-key="nestle_tooltip">
+            We A/B tested emotional vs rational ads. Simpler storytelling won — massively.
+          </span>
+          <h3>Nestlé</h3>
+          <p data-key="nestle_desc">Boosted product awareness in targeted campaigns: +70k new leads.</p>
+        </div>
+      </a>
+
+      <a class="client-card" href="https://www.louboutin.com" target="_blank">
+        <div class="tooltip">
+          <span class="tooltip-text" data-key="louboutin_tooltip">
+            We turned user-generated content into luxury visuals — doubled Instagram interactions.
+          </span>
+          <h3>Christian Louboutin</h3>
+          <p data-key="louboutin_desc">Elevated digital presence with fashion-forward branding.</p>
+        </div>
+      </a>
+
+      <a class="client-card" href="https://www.coca-cola.com" target="_blank">
+        <div class="tooltip">
+          <span class="tooltip-text" data-key="cocacola_tooltip">
+            Interactive gamified ad boosted click-through rate by 110% during summer launches.
+          </span>
+          <h3>Coca-Cola</h3>
+          <p data-key="cocacola_desc">Gamified brand engagement: increased interaction by 110%.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <p>
+        <a href="index.html" data-key="nav_home">Home</a> |
+        <a href="about.html" data-key="nav_about">About</a> |
+        <a href="team.html" data-key="nav_team">Team</a> |
+        <a href="contact.html" data-key="nav_contact">Contact</a>
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <p><span data-key="footer_email">Email:</span> info@MSNSTUDIO.com</p>
+      <p><span data-key="footer_phone">Phone:</span> 0768334767</p>
+      <p><span data-key="footer_address">Address:</span> Baia Mare, Bd Regele Ferdinand nr 2</p>
+    </div>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        nav_home: "Home",
+        nav_about: "About",
+        nav_team: "Team",
+        nav_contact: "Contact",
+
+        who_we_are: "Who we are?",
+        about_text_1: "MSN Studio is a bold and data-driven marketing agency based in the heart of Europe. We specialize in transforming ideas into powerful campaigns by blending creativity, precision, and innovation. Whether it’s branding, content, or full-scale digital strategies, we tailor everything to your goals.",
+        about_text_2: "Our team believes in transparent collaboration and delivering measurable results. We’re not just a marketing firm — we’re your creative allies, strategizing success one click at a time.",
+
+        why_choose: "Why choose us?",
+        why_1_title: "Creative but grounded:",
+        why_1_text: " We balance imagination with real-world performance data.",
+        why_2_title: "Client-first approach:",
+        why_2_text: " Every strategy is customized, never copy-paste.",
+        why_3_title: "Results you can measure:",
+        why_3_text: " Engagement, leads, conversions — we optimize all.",
+        why_4_title: "Partners, not vendors:",
+        why_4_text: " We grow with you, not just for you.",
+
+        clients_title: "Clients we’ve helped",
+
+        apple_tooltip: "We automated Apple’s retargeting campaigns using AI, boosting their conversion rate by 28%.",
+        apple_desc: "+32% product engagement in 4 months after our digital campaign.",
+
+        prada_tooltip: "We launched a fashion mini-series campaign that increased time-on-site by 67%.",
+        prada_desc: "Luxury redefined through visual branding: +40% online sales.",
+
+        starbucks_tooltip: "Weather-based messaging led to a 53% increase in email open rates.",
+        starbucks_desc: "Helped build a local campaign with +60% foot traffic growth.",
+
+        harman_tooltip: "We used audio niche influencers and doubled engagement without increasing the budget.",
+        harman_desc: "Brand lift through influencer strategies: 3x brand mentions.",
+
+        loro_tooltip: "Luxury silent targeting campaign — focused only on top-tier clients. +18% offline sales.",
+        loro_desc: "Refined their storytelling with +25% engagement on seasonal launches.",
+
+        nestle_tooltip: "We A/B tested emotional vs rational ads. Simpler storytelling won — massively.",
+        nestle_desc: "Boosted product awareness in targeted campaigns: +70k new leads.",
+
+        louboutin_tooltip: "We turned user-generated content into luxury visuals — doubled Instagram interactions.",
+        louboutin_desc: "Elevated digital presence with fashion-forward branding.",
+
+        cocacola_tooltip: "Interactive gamified ad boosted click-through rate by 110% during summer launches.",
+        cocacola_desc: "Gamified brand engagement: increased interaction by 110%.",
+
+        footer_email: "Email:",
+        footer_phone: "Phone:",
+        footer_address: "Address:"
+      },
+
+      ro: {
+        nav_home: "Acasă",
+        nav_about: "Despre",
+        nav_team: "Echipă",
+        nav_contact: "Contact",
+
+        who_we_are: "Cine suntem?",
+        about_text_1: "MSN Studio este o agenție de marketing modernă, orientată spre date, situată în inima Europei. Ne specializăm în transformarea ideilor în campanii puternice, îmbinând creativitatea, precizia și inovația. Fie că este vorba despre branding, content sau strategii digitale complete, adaptăm totul în funcție de obiectivele tale.",
+        about_text_2: "Echipa noastră crede în colaborare transparentă și în rezultate măsurabile. Nu suntem doar o firmă de marketing — suntem aliații tăi creativi, construind succesul pas cu pas.",
+
+        why_choose: "De ce să ne alegi?",
+        why_1_title: "Creativi, dar ancorați în realitate:",
+        why_1_text: " Îmbinăm imaginația cu date reale de performanță.",
+        why_2_title: "Abordare orientată spre client:",
+        why_2_text: " Fiecare strategie este personalizată, niciodată copiată.",
+        why_3_title: "Rezultate măsurabile:",
+        why_3_text: " Optimizăm engagementul, lead-urile și conversiile.",
+        why_4_title: "Parteneri, nu doar furnizori:",
+        why_4_text: " Creștem împreună cu tine, nu doar pentru tine.",
+
+        clients_title: "Clienți pe care i-am ajutat",
+
+        apple_tooltip: "Am automatizat campaniile de retargeting Apple folosind AI, crescând rata de conversie cu 28%.",
+        apple_desc: "+32% engagement pentru produs în 4 luni după campania noastră digitală.",
+
+        prada_tooltip: "Am lansat o mini-serie fashion care a crescut timpul petrecut pe site cu 67%.",
+        prada_desc: "Lux redefinit prin branding vizual: +40% vânzări online.",
+
+        starbucks_tooltip: "Mesajele adaptate în funcție de vreme au dus la o creștere de 53% a ratei de deschidere a emailurilor.",
+        starbucks_desc: "Am contribuit la o campanie locală cu +60% creștere a traficului în locații.",
+
+        harman_tooltip: "Am folosit influenceri din nișa audio și am dublat engagementul fără să creștem bugetul.",
+        harman_desc: "Creștere de brand prin strategii cu influenceri: de 3 ori mai multe mențiuni.",
+
+        loro_tooltip: "Campanie luxury discretă — focus doar pe clienți premium. +18% vânzări offline.",
+        loro_desc: "Am rafinat storytellingul lor cu +25% engagement la lansările sezoniere.",
+
+        nestle_tooltip: "Am testat A/B reclame emoționale vs raționale. Storytellingul simplu a câștigat clar.",
+        nestle_desc: "Am crescut notorietatea produselor prin campanii targetate: +70k lead-uri noi.",
+
+        louboutin_tooltip: "Am transformat conținutul generat de utilizatori în vizualuri luxury — dublând interacțiunile pe Instagram.",
+        louboutin_desc: "Prezență digitală ridicată la un nou nivel prin branding fashion-forward.",
+
+        cocacola_tooltip: "O reclamă interactivă gamificată a crescut click-through rate-ul cu 110% în campaniile de vară.",
+        cocacola_desc: "Campanie gamificată pentru brand engagement: +110% interacțiune.",
+
+        footer_email: "Email:",
+        footer_phone: "Telefon:",
+        footer_address: "Adresă:"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      localStorage.setItem("lang", lang);
+    }
+
+    window.onload = () => {
+      const savedLang = localStorage.getItem("lang") || "en";
+      setLanguage(savedLang);
+    };
+    function toggleLanguage() {
+  const toggle = document.querySelector(".toggle");
+
+  let currentLang = localStorage.getItem("lang") || "en";
+
+  if (currentLang === "en") {
+    setLanguage("ro");
+    toggle.classList.add("active");
+  } else {
+    setLanguage("en");
+    toggle.classList.remove("active");
+  }
+}
+
+// sincronizare la reload
+window.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "en";
+  const toggle = document.querySelector(".toggle");
+
+  if (savedLang === "ro") {
+    toggle.classList.add("active");
+  }
+});
+  </script>
+</body>
+</html>

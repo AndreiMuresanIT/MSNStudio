@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – MSN Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">MSN Studio</div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" data-key="nav_home">Home</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li><a href="team.html" data-key="nav_team">Team</a></li>
+        <li class="active"><a href="contact.html" data-key="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="language-switch">
+  <div class="switch">
+    <span class="label">ENG</span>
+    <div class="toggle" onclick="toggleLanguage()">
+      <div class="circle"></div>
+    </div>
+    <span class="label">RO</span>
+  </div>
+</div>
+  </header>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <h2 data-key="contact_title">Contact Us</h2>
+
+    <div class="contact-container">
+
+      <div class="contact-info">
+        <p><strong data-key="phone">Phone:</strong> 0768334767</p>
+        <p><strong data-key="email">Email:</strong> info@MSNSTUDIO9.com</p>
+        <p><strong data-key="location">Location:</strong> Baia Mare, Bd Regele Ferdinand nr 2</p>
+      </div>
+
+      <div class="contact-form">
+        <form id="contactForm" action="https://formspree.io/f/xblobdye" method="POST">
+          <textarea name="message" data-key-placeholder="textarea" placeholder="Write your idea..." required></textarea>
+          <button type="submit" data-key="send_btn">Send</button>
+        </form>
+
+        <div id="successMessage" class="hidden" data-key="success_msg">
+          Thank you for contacting us! An operator will reply to your email shortly.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.230037244935!2d23.57343501558471!3d47.6530351791876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4737dba037f404b1%3A0xc86e0ff2d73f2de1!2sBulevardul%20Regele%20Ferdinand%202%2C%20Baia%20Mare%20430511!5e0!3m2!1sen!2sro!4v1716127077045!5m2!1sen!2sro"
+        width="100%"
+        height="300"
+        style="border:0;"
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <p>
+        <a href="index.html" data-key="nav_home">Home</a> |
+        <a href="about.html" data-key="nav_about">About</a> |
+        <a href="team.html" data-key="nav_team">Team</a> |
+        <a href="contact.html" data-key="nav_contact">Contact</a>
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <p><span data-key="footer_email">Email:</span> info@MSNSTUDIO.com</p>
+      <p><span data-key="footer_phone">Phone:</span> 0768334767</p>
+      <p><span data-key="footer_address">Address:</span> Baia Mare, Bd Regele Ferdinand nr 2</p>
+    </div>
+  </footer>
+
+  <!-- MENU HOVER -->
+  <script>
+    const links = document.querySelectorAll("header nav ul li a");
+    links.forEach(link => {
+      link.addEventListener("mouseover", () => link.classList.add("hover"));
+      link.addEventListener("mouseout", () => link.classList.remove("hover"));
+    });
+  </script>
+
+  <!-- FORM SUBMIT -->
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+
+      fetch("https://formspree.io/f/xblobdye", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" }
+      }).then(response => {
+        if (response.ok) {
+          const msg = document.getElementById("successMessage");
+          msg.classList.remove("hidden");
+          msg.classList.add("visible");
+
+          form.reset();
+
+          setTimeout(() => {
+            msg.classList.remove("visible");
+          }, 5000);
+        }
+      });
+    });
+  </script>
+
+  <!-- TRANSLATIONS -->
+  <script>
+    const translations = {
+      en: {
+        nav_home: "Home",
+        nav_about: "About",
+        nav_team: "Team",
+        nav_contact: "Contact",
+
+        contact_title: "Contact Us",
+        phone: "Phone:",
+        email: "Email:",
+        location: "Location:",
+
+        textarea: "Write your idea...",
+        send_btn: "Send",
+
+        success_msg: "Thank you for contacting us! An operator will reply to your email shortly.",
+
+        footer_email: "Email:",
+        footer_phone: "Phone:",
+        footer_address: "Address:"
+      },
+
+      ro: {
+        nav_home: "Acasă",
+        nav_about: "Despre",
+        nav_team: "Echipă",
+        nav_contact: "Contact",
+
+        contact_title: "Contactează-ne",
+        phone: "Telefon:",
+        email: "Email:",
+        location: "Locație:",
+
+        textarea: "Scrie ideea ta...",
+        send_btn: "Trimite",
+
+        success_msg: "Mulțumim pentru mesaj! Vei primi un răspuns în scurt timp.",
+
+        footer_email: "Email:",
+        footer_phone: "Telefon:",
+        footer_address: "Adresă:"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      document.querySelectorAll("[data-key-placeholder]").forEach(el => {
+        const key = el.getAttribute("data-key-placeholder");
+        if (translations[lang][key]) {
+          el.placeholder = translations[lang][key];
+        }
+      });
+
+      localStorage.setItem("lang", lang);
+    }
+
+    window.onload = () => {
+      const savedLang = localStorage.getItem("lang") || "en";
+      setLanguage(savedLang);
+    };
+    function toggleLanguage() {
+  const toggle = document.querySelector(".toggle");
+
+  let currentLang = localStorage.getItem("lang") || "en";
+
+  if (currentLang === "en") {
+    setLanguage("ro");
+    toggle.classList.add("active");
+  } else {
+    setLanguage("en");
+    toggle.classList.remove("active");
+  }
+}
+
+// sincronizare la reload
+window.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "en";
+  const toggle = document.querySelector(".toggle");
+
+  if (savedLang === "ro") {
+    toggle.classList.add("active");
+  }
+});
+  </script>
+
+</body>
+</html>

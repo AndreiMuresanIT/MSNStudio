@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team – MSN Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">MSN Studio</div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" data-key="nav_home">Home</a></li>
+        <li><a href="about.html" data-key="nav_about">About</a></li>
+        <li class="active"><a href="team.html" data-key="nav_team">Team</a></li>
+        <li><a href="contact.html" data-key="nav_contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="language-switch">
+  <div class="switch">
+    <span class="label">ENG</span>
+    <div class="toggle" onclick="toggleLanguage()">
+      <div class="circle"></div>
+    </div>
+    <span class="label">RO</span>
+  </div>
+</div>
+  </header>
+
+  <!-- TEAM -->
+  <section class="team-section">
+    <h2 data-key="team_title">Meet Our Team</h2>
+
+    <div class="team-grid">
+
+      <div class="team-member">
+        <img src="img/ceo.png">
+        <div class="member-info">
+          <h3>Andrei Mureșan</h3>
+          <p data-key="ceo_title">Chief Executive Officer</p>
+          <p data-key="ceo_desc">Drives strategy, leads teams, and manages client relations at the highest level.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="img/creativedirector.png">
+        <div class="member-info">
+          <h3>Kari Jobe</h3>
+          <p data-key="creative_title">Creative Director</p>
+          <p data-key="creative_desc">Oversees visual identity and campaign storytelling.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="img/headofdigital.png">
+        <div class="member-info">
+          <h3>Austin French</h3>
+          <p data-key="digital_title">Head of Digital</p>
+          <p data-key="digital_desc">Manages SEO, paid ads and social media channels.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="img/publicresearchlead.png">
+        <div class="member-info">
+          <h3>Chris Tomlin</h3>
+          <p data-key="research_title">Public Research Lead</p>
+          <p data-key="research_desc">Analyzes trends and customer behavior.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="img/marketanalist.png">
+        <div class="member-info">
+          <h3>Phil Wickham</h3>
+          <p data-key="analyst_title">Market Analyst</p>
+          <p data-key="analyst_desc">Transforms data into actionable strategies.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="img/clientservice.png">
+        <div class="member-info">
+          <h3>Brandon Lake</h3>
+          <p data-key="client_title">Client Services Manager</p>
+          <p data-key="client_desc">Handles communication and client satisfaction.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="img/sales.png">
+        <div class="member-info">
+          <h3>Frank Forest</h3>
+          <p data-key="sales_title">Sales Development</p>
+          <p data-key="sales_desc">Builds relationships and drives growth.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="img/events.png">
+        <div class="member-info">
+          <h3>Michel W Smith</h3>
+          <p data-key="events_title">Events & Promotions</p>
+          <p data-key="events_desc">Organizes campaigns and brand events.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <img src="img/product.png">
+        <div class="member-info">
+          <h3>Lecare</h3>
+          <p data-key="product_title">Product Marketing</p>
+          <p data-key="product_desc">Creates go-to-market strategies.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-links">
+      <p>
+        <a href="index.html" data-key="nav_home">Home</a> |
+        <a href="about.html" data-key="nav_about">About</a> |
+        <a href="team.html" data-key="nav_team">Team</a> |
+        <a href="contact.html" data-key="nav_contact">Contact</a>
+      </p>
+    </div>
+
+    <div class="footer-contact">
+      <p><span data-key="footer_email">Email:</span> info@MSNSTUDIO.com</p>
+      <p><span data-key="footer_phone">Phone:</span> 0768334767</p>
+      <p><span data-key="footer_address">Address:</span> Baia Mare</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const translations = {
+      en: {
+        nav_home: "Home",
+        nav_about: "About",
+        nav_team: "Team",
+        nav_contact: "Contact",
+
+        team_title: "Meet Our Team",
+
+        ceo_title: "Chief Executive Officer",
+        ceo_desc: "Drives strategy, leads teams, and manages client relations.",
+
+        creative_title: "Creative Director",
+        creative_desc: "Oversees visual identity and storytelling.",
+
+        digital_title: "Head of Digital",
+        digital_desc: "Manages digital channels and campaigns.",
+
+        research_title: "Public Research Lead",
+        research_desc: "Analyzes trends and customer behavior.",
+
+        analyst_title: "Market Analyst",
+        analyst_desc: "Transforms data into strategies.",
+
+        client_title: "Client Services Manager",
+        client_desc: "Ensures communication and satisfaction.",
+
+        sales_title: "Sales Development",
+        sales_desc: "Drives new business opportunities.",
+
+        events_title: "Events & Promotions",
+        events_desc: "Organizes campaigns and events.",
+
+        product_title: "Product Marketing",
+        product_desc: "Builds go-to-market strategies.",
+
+        footer_email: "Email:",
+        footer_phone: "Phone:",
+        footer_address: "Address:"
+      },
+
+      ro: {
+        nav_home: "Acasă",
+        nav_about: "Despre",
+        nav_team: "Echipă",
+        nav_contact: "Contact",
+
+        team_title: "Echipa Noastră",
+
+        ceo_title: "Director General",
+        ceo_desc: "Coordonează strategia și relațiile.",
+
+        creative_title: "Director Creativ",
+        creative_desc: "Coordonează identitatea vizuală.",
+
+        digital_title: "Șef Digital",
+        digital_desc: "Gestionează canalele online.",
+
+        research_title: "Cercetare Publică",
+        research_desc: "Analizează comportamentul clienților.",
+
+        analyst_title: "Analist de Piață",
+        analyst_desc: "Transformă datele în strategie.",
+
+        client_title: "Relații Clienți",
+        client_desc: "Asigură comunicarea cu clienții.",
+
+        sales_title: "Dezvoltare Vânzări",
+        sales_desc: "Crește oportunitățile de business.",
+
+        events_title: "Evenimente & Promoții",
+        events_desc: "Organizează campanii și lansări.",
+
+        product_title: "Marketing Produs",
+        product_desc: "Construiește strategii de lansare.",
+
+        footer_email: "Email:",
+        footer_phone: "Telefon:",
+        footer_address: "Adresă:"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      localStorage.setItem("lang", lang);
+    }
+
+    window.onload = () => {
+      const savedLang = localStorage.getItem("lang") || "en";
+      setLanguage(savedLang);
+    };
+
+    function toggleLanguage() {
+  const toggle = document.querySelector(".toggle");
+
+  let currentLang = localStorage.getItem("lang") || "en";
+
+  if (currentLang === "en") {
+    setLanguage("ro");
+    toggle.classList.add("active");
+  } else {
+    setLanguage("en");
+    toggle.classList.remove("active");
+  }
+}
+
+// sincronizare la reload
+window.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "en";
+  const toggle = document.querySelector(".toggle");
+
+  if (savedLang === "ro") {
+    toggle.classList.add("active");
+  }
+});
+  </script>
+
+</body>
+</html>

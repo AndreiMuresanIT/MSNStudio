@@ -1,0 +1,511 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #000;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #b0b0b0;
+  transition: all 0.3s ease;
+}
+
+a.hover,
+nav ul li a:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+header {
+  background-color: #121212;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+nav ul li.active a {
+  color: #fff;
+  border-bottom: none;
+}
+
+/* Hero Image */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 20px;
+}
+
+/* What We Do Section */
+.what-we-do {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.what-we-do h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.what-we-do p {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #121212;
+  color: #b0b0b0;
+  padding: 30px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-links p,
+.footer-contact p {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #b0b0b0;
+  margin-right: 10px;
+}
+
+.footer-links a:hover {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .overlay h1 {
+    font-size: 32px;
+  }
+
+  .footer-contact,
+  .footer-links {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+
+
+/* About Section */
+.about-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+/* Why Choose Us Section */
+.why-us {
+  background-color: #f8f8f8;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.why-us h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.why-us ul {
+  list-style: disc inside;
+  color: #333;
+  font-size: 17px;
+}
+
+.why-us li {
+  margin-bottom: 15px;
+}
+
+/* Clients Section */
+.clients {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.clients h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.client-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  background-color: #e0e0e0;
+}
+
+.client-card h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.client-card {
+  text-decoration: none;
+  color: #000;              /* <--- forțează culoarea textului */
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  background-color: #e0e0e0;
+  color: #000;              /* <--- păstrează negru la hover */
+}
+
+.client-card {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  overflow: visible;
+}
+
+.client-card:hover {
+  transform: translateY(-5px);
+  background-color: #e0e0e0;
+}
+
+/* Tooltip Styles */
+.tooltip {
+  position: relative;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  width: 240px;
+  background-color: #121212;
+  color: #fff;
+  text-align: left;
+  border-radius: 8px;
+  padding: 12px;
+  position: absolute;
+  top: -110%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+.team-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-5px);
+}
+
+.team-member img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #121212;
+}
+
+.member-info h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.member-info p {
+  margin-bottom: 5px;
+  color: #333;
+  font-size: 15px;
+}
+
+
+.contact-section {
+  background-color: #fff;
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+  text-align: left;
+  font-size: 18px;
+  color: #333;
+  line-height: 1.8;
+}
+
+.contact-form {
+  flex: 1 1 300px;
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 150px;
+  padding: 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form textarea:focus {
+  border-color: #4d94ff;
+  outline: none;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #4d94ff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #0052cc;
+}
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
+#successMessage {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#successMessage.visible {
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
+.language-switch {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.language-switch button {
+  background: none;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: 0.3s;
+}
+
+.language-switch button:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.language-switch {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 12px;
+}
+
+.toggle {
+  width: 50px;
+  height: 24px;
+  background-color: #555;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+
+/* când e pe RO */
+.toggle.active {
+  background-color: #4d94ff;
+}
+
+.toggle.active .circle {
+  transform: translateX(26px);
+}
